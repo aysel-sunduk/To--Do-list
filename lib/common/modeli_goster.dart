@@ -10,26 +10,12 @@ import 'package:yapilacaklarlistesi1/sabitler/app_style.dart';
 import 'package:yapilacaklarlistesi1/widget/metinAlani_widget.dart';
 import 'package:yapilacaklarlistesi1/widget/radio_widget.dart';
 import 'package:yapilacaklarlistesi1/widget/tarih_saat_widget.dart';
-class YeniGorevModeliEkle extends ConsumerStatefulWidget {
-  YeniGorevModeliEkle({super.key});
 
-  @override
-  ConsumerState<YeniGorevModeliEkle> createState() => _YeniGorevModeliEkleState();
-}
 
-class _YeniGorevModeliEkleState extends ConsumerState<YeniGorevModeliEkle> {
   final baslikDenetleyici = TextEditingController();
   final aciklamaDenetleyici = TextEditingController();
 
   @override
-  void dispose() {
-    baslikDenetleyici.dispose();
-    aciklamaDenetleyici.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
     final tarihProv = ref.watch(tarihProvider);
    return SingleChildScrollView(
   child: Padding(

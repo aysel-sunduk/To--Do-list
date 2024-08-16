@@ -64,12 +64,23 @@ const AnaSayfa({super.key});
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
+
                         "Yapılacaklar",
+
+                        "Bugünkü görevler",
+
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
                         ),
+                      ),
+
+
+
+                      Text(
+                        "Çarşamba,7 Ağustos",
+                        style: TextStyle(color: Colors.grey),
                       ),
 
                     ],
