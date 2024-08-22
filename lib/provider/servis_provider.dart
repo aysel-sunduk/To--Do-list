@@ -13,7 +13,7 @@ final fetchStreamProvider = StreamProvider<List<TodoModel>>((ref) async* {
       .collection('todoApp')
       .snapshots()
       .map((event) => event.docs
-          .map((snapshot) => TodoModel.fromSnapshot(snapshot))
-          .toList());
+      .map((snapshot) => TodoModel.fromSnapshot(snapshot))
+      .toList());
   yield* getData;
 });

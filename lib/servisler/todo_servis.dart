@@ -8,11 +8,16 @@ class TodoServis {
     todoKoleksiyon.add(model.toMap());
   }
 
-  void gorevGuncelleme(String? docID, bool? valueUpdate) {
-    todoKoleksiyon.doc(docID).update({
-      'isDone': valueUpdate,
-    });
+  void gorevGuncelleme(String? docID, TodoModel updatedModel) {
+    if (docID != null) {
+      todoKoleksiyon.doc(docID).update(updatedModel.toMap());
+    } else {
+      print('Document ID is null.');
+    }
   }
+
+
+
 
   void gorevSilme(String? docID) {
     todoKoleksiyon.doc(docID).delete();

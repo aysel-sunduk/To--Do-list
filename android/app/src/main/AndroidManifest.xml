@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    package="com.yapilacaklarlistesi1.app"> <!-- Paket adını buraya ekleyin -->
+
+
     <application
         android:label="yapilacaklarlistesi1"
         android:name="${applicationName}"
